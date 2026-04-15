@@ -1,0 +1,114 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jesús Emmanuel López Zúñiga | Portafolio UX</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --rainbow-gradient: linear-gradient(135deg, #ff4ecd, #7a5cff, #00cfff, #00ffb2, #ffe600, #ff7a00);
+      --rainbow-static: linear-gradient(135deg, #ff4ecd, #7a5cff, #00cfff, #00ffb2, #ffe600, #ff7a00);
+      --card-bg: #ffffff;
+      --border-light: #eef2ff;
+      --text-dark: #0b1120;
+      --shadow-sm: 0 10px 25px -5px rgba(0,0,0,0.05);
+      --shadow-hover: 0 20px 35px -12px rgba(0,0,0,0.15);
+    }
+    body { font-family: 'Space Grotesk', sans-serif; background: #fefefe; color: var(--text-dark); }
+    .rainbow-header {
+      background: var(--rainbow-gradient);
+      background-size: 300% 300%;
+      animation: auroraMove 12s ease infinite;
+      padding: 3rem 2rem;
+      text-align: center;
+      color: white;
+      clip-path: polygon(0 0, 100% 0, 100% 88%, 0 100%);
+      margin-bottom: 2rem;
+    }
+    @keyframes auroraMove { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
+    .uni-badge { display: inline-block; background: rgba(255,255,255,0.2); backdrop-filter: blur(8px); padding: 0.4rem 1.2rem; border-radius: 40px; font-size: 0.75rem; margin-bottom: 1rem; border: 1px solid rgba(255,255,255,0.3); }
+    .rainbow-header h1 { font-size: 2.8rem; margin: 0.5rem 0; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+    .section-title { font-size: 1.8rem; font-weight: 600; margin: 2rem 0 1rem; display: flex; align-items: center; gap: 12px; background: var(--rainbow-static); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .profile-row { display: flex; flex-wrap: wrap; gap: 40px; align-items: center; margin: 40px 0; background: white; border-radius: 32px; padding: 2rem; box-shadow: var(--shadow-sm); border: 1px solid var(--border-light); }
+    .profile-img { flex: 0 0 160px; text-align: center; }
+    .profile-img img { width: 150px; height: 150px; object-fit: cover; border-radius: 50%; border: 4px solid #7a5cff; box-shadow: var(--shadow-sm); }
+    .profile-info { flex: 1; }
+    .social-links { display: flex; gap: 20px; margin-top: 20px; }
+    .social-links a { background: #f1f5f9; padding: 8px 20px; border-radius: 40px; text-decoration: none; color: #1e293b; font-weight: 500; display: inline-flex; align-items: center; gap: 8px; transition: 0.2s; }
+    .social-links a:hover { background: var(--rainbow-static); color: white; }
+    .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap: 24px; margin: 30px 0; }
+    .card { background: white; border-radius: 24px; padding: 1.5rem; border: 1px solid var(--border-light); transition: 0.2s; box-shadow: var(--shadow-sm); }
+    .card:hover { transform: translateY(-5px); box-shadow: var(--shadow-hover); border-color: #ff4ecd; }
+    .btn { display: inline-block; background: linear-gradient(105deg, #7a5cff, #ff4ecd); color: white; padding: 12px 28px; border-radius: 40px; text-decoration: none; font-weight: 600; margin-top: 1rem; transition: 0.2s; }
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,0.1); }
+    .nav-links { display: flex; gap: 20px; justify-content: center; margin: 20px 0; flex-wrap: wrap; }
+    .nav-link { background: #f1f5f9; padding: 8px 20px; border-radius: 40px; text-decoration: none; color: #1e293b; font-weight: 500; transition: 0.2s; }
+    .nav-link:hover { background: var(--rainbow-static); color: white; }
+    footer { border-top: 1px solid #eef2ff; padding: 2rem; text-align: center; color: #5b6e8c; margin-top: 60px; }
+    @media (max-width: 700px) { .profile-row { flex-direction: column; text-align: center; } .profile-img { margin-bottom: 1rem; } }
+  </style>
+</head>
+<body>
+<header class="rainbow-header">
+  <div class="uni-badge">✨ Universidad Politécnica de Victoria ✨</div>
+  <h1>Jesús Emmanuel López Zúñiga</h1>
+  <p>Ingeniería en Tecnologías de la Información · Aspirante a UX Designer</p>
+</header>
+<div class="container">
+  <div class="nav-links">
+    <a href="index.html" class="nav-link">Inicio</a>
+    <a href="propuesta1.html" class="nav-link">Biblioteca UPV</a>
+    <a href="propuesta2.html" class="nav-link">EcoMatch</a>
+    <a href="certificados.html" class="nav-link">Certificados</a>
+    <a href="cv.pdf" class="nav-link">CV</a>
+  </div>
+
+  <div class="profile-row">
+    <div class="profile-img">
+      <!-- Coloca tu foto en la raíz con nombre "foto.jpg" o cambia la ruta -->
+      <img src="foto.jpeg" alt="Jesús Emmanuel López Zúñiga">
+    </div>
+    <div class="profile-info">
+      <h2 style="color:#7a5cff;">👋 Sobre mí</h2>
+      <p style="font-size: 1.05rem; line-height: 1.5;">Soy estudiante de octavo cuatrimestre en la UPV, apasionado por el diseño de experiencias de usuario, la inteligencia artificial y la sostenibilidad. Actualmente curso el <strong>Certificado Profesional de Google UX Design</strong> en Coursera, donde he aprendido a realizar investigación de usuarios, crear wireframes, prototipos de alta fidelidad y pruebas de usabilidad.</p>
+      <div class="social-links">
+        <a href="https://github.com/EmmanuelLopez15" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+        <a href="https://www.linkedin.com/in/jesus-emmanuel-lopez-zuñiga-7082353b3" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-title"><i class="fas fa-graduation-cap"></i> Logros y Experiencia</div>
+  <div class="card-grid">
+    <div class="card"><i class="fas fa-robot" style="font-size: 2rem; color: #ff4ecd;"></i><h3>Robótica</h3><p>Participación en el Torneo Mexicano de Robótica (TMR) 2023.</p></div>
+    <div class="card"><i class="fas fa-flask" style="font-size: 2rem; color: #7a5cff;"></i><h3>Investigación</h3><p>Segundo lugar en FECIT 2025 con proyecto de biogel para purificación de agua.</p></div>
+    <div class="card"><i class="fas fa-chalkboard-user" style="font-size: 2rem; color: #00cfff;"></i><h3>Estancias Profesionales</h3><p>SARTET (Inventario) · INAOE (Diseño Digital con CAD).</p></div>
+    <div class="card"><i class="fas fa-leaf" style="font-size: 2rem; color: #00ffb2;"></i><h3>EcoMatch</h3><p>Proyecto UX que conecta estudiantes con oportunidades ambientales usando IA.</p></div>
+  </div>
+
+  <div class="section-title"><i class="fab fa-google"></i> Certificación Google UX</div>
+  <div class="card">
+    <p>He completado los cursos de fundamentos de UX, investigación, ideación, wireframing, prototipado y testing. Aplico metodologías <strong>Design Thinking</strong> para crear soluciones centradas en el usuario. Este portafolio muestra dos casos de estudio completos.</p>
+    <a href="certificados.html" class="btn">Ver certificados</a>
+  </div>
+
+  <div style="text-align: center; margin: 60px 0;">
+    <h2 style="font-size: 1.8rem;">📌 Explora mis casos prácticos</h2>
+    <div class="nav-links">
+      <a href="propuesta1.html" class="btn" style="background: #7a5cff;">Biblioteca UPV</a>
+      <a href="propuesta2.html" class="btn" style="background: #ff4ecd;">EcoMatch</a>
+    </div>
+  </div>
+
+  <footer>
+    <i class="far fa-copyright"></i> 2026 · Jesús Emmanuel López Zúñiga · UPV · Ingeniería en TI<br>
+    <a href="mailto:2330071@upv.edu.mx" style="color: #7a5cff;">2330071@upv.edu.mx</a> · Cd. Victoria, Tamaulipas
+  </footer>
+</div>
+</body>
+</html>

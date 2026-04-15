@@ -1,0 +1,131 @@
+<!-- certificados.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Certificados · Jesús Emmanuel López Zúñiga</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --rainbow-gradient: linear-gradient(135deg, #ff4ecd, #7a5cff, #00cfff, #00ffb2, #ffe600, #ff7a00);
+      --border-light: #eef2ff;
+      --shadow-sm: 0 10px 25px -5px rgba(0,0,0,0.05);
+      --shadow-hover: 0 20px 35px -12px rgba(0,0,0,0.15);
+    }
+    body { font-family: 'Space Grotesk', sans-serif; background: #fefefe; }
+    .rainbow-header {
+      background: var(--rainbow-gradient);
+      background-size: 300% 300%;
+      animation: auroraMove 12s ease infinite;
+      padding: 3rem 2rem;
+      text-align: center;
+      color: white;
+      clip-path: polygon(0 0, 100% 0, 100% 88%, 0 100%);
+      margin-bottom: 2rem;
+    }
+    .cert-final-destacado {
+      margin: 40px 0;
+      width: 100%;
+    }
+
+    .cert-embed-card-final {
+      background: white;
+      border-radius: 24px;
+      overflow: hidden;
+      border: 1px solid var(--border-light);
+      transition: 0.3s;
+      box-shadow: var(--shadow-hover);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .cert-embed-card-final:hover {
+      transform: translateY(-4px);
+      border-color: #ff4ecd;
+    }
+
+    .cert-pdf-final {
+      width: 100%;
+      height: 600px; /* Más alto para destacar */
+      border: none;
+      background: #ffffff; /* Fondo blanco, no gris */
+    }
+
+    .cert-label-final {
+      padding: 16px;
+      text-align: center;
+      font-weight: 700;
+      font-size: 1.1rem;
+      background: white;
+      border-top: 2px solid var(--rainbow-gradient);
+      color: #1e293b;
+    }
+
+    /* Responsive */
+    @media (max-width: 700px) {
+      .cert-pdf-final {
+        height: 400px;
+      }
+    }
+    
+    @keyframes auroraMove { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
+    .uni-badge { display: inline-block; background: rgba(255,255,255,0.2); backdrop-filter: blur(8px); padding: 0.4rem 1.2rem; border-radius: 40px; font-size: 0.75rem; margin-bottom: 1rem; }
+    .rainbow-header h1 { font-size: 3rem; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+    .section-title { font-size: 2rem; font-weight: 600; margin: 2rem 0 1.5rem; display: flex; gap: 12px; background: var(--rainbow-gradient); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .cert-grid-embed { display: grid; grid-template-columns: repeat(2,1fr); gap: 25px; margin: 30px 0; }
+    .cert-embed-card { background: white; border-radius: 16px; overflow: hidden; border: 1px solid var(--border-light); transition: 0.3s; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; }
+    .cert-embed-card:hover { transform: translateY(-6px); border-color: #ff4ecd; box-shadow: var(--shadow-hover); }
+    .cert-pdf { width: 100%; height: 320px; border: none; background: #f5f7fc; }
+    .cert-label { padding: 12px; text-align: center; font-weight: 600; border-top: 1px solid var(--border-light); background: white; }
+    .nav-links { display: flex; gap: 20px; justify-content: center; margin: 20px 0; flex-wrap: wrap; }
+    .nav-link { background: #f1f5f9; padding: 8px 20px; border-radius: 40px; text-decoration: none; color: #1e293b; font-weight: 500; transition: 0.2s; }
+    .nav-link:hover { background: var(--rainbow-gradient); color: white; }
+    footer { border-top: 1px solid #eef2ff; padding: 2rem; text-align: center; color: #5b6e8c; margin-top: 60px; }
+    @media (max-width: 700px) { .cert-grid-embed { grid-template-columns: 1fr; } .cert-pdf { height: 240px; } .rainbow-header h1 { font-size: 2rem; } .slides-container iframe { height: 300px; } }
+  </style>
+</head>
+<body>
+<header class="rainbow-header">
+  <div class="uni-badge">✨ Certificados Profesionales ✨</div>
+  <h1>Mis Certificaciones</h1>
+  <p>Google UX Design · Cursos especializados</p>
+</header>
+<div class="container">
+  <div class="nav-links">
+    <a href="index.html" class="nav-link">Inicio</a>
+    <a href="propuesta1.html" class="nav-link">Propuesta 1</a>
+    <a href="propuesta2.html" class="nav-link">Propuesta 2</a>
+    <a href="certificados.html" class="nav-link">Certificados</a>
+    <a href="cv.pdf" class="nav-link">CV</a>
+  </div>
+  
+  <div class="section-title"><i class="fas fa-certificate"></i> Certificados</div>
+  <div class="cert-grid-embed">
+    <div class="cert-embed-card"><embed src="certificados/certificado1.pdf" type="application/pdf" class="cert-pdf"><div class="cert-label">Certificado 1</div></div>
+    <div class="cert-embed-card"><embed src="certificados/certificado2.pdf" type="application/pdf" class="cert-pdf"><div class="cert-label">Certificado 2</div></div>
+    <div class="cert-embed-card"><embed src="certificados/certificado3.pdf" type="application/pdf" class="cert-pdf"><div class="cert-label">Certificado 3</div></div>
+    <div class="cert-embed-card"><embed src="certificados/certificado4.pdf" type="application/pdf" class="cert-pdf"><div class="cert-label">Certificado 4</div></div>
+    <div class="cert-embed-card"><embed src="certificados/certificado5.pdf" type="application/pdf" class="cert-pdf"><div class="cert-label">Certificado 5</div></div>
+    <div class="cert-embed-card"><embed src="certificados/certificado6.pdf" type="application/pdf" class="cert-pdf"><div class="cert-label">Certificado 6</div></div>
+    <div class="cert-embed-card"><embed src="certificados/certificado7.pdf" type="application/pdf" class="cert-pdf"><div class="cert-label">Certificado 7</div></div>
+    <div class="cert-embed-card"><embed src="certificados/certificado8.pdf" type="application/pdf" class="cert-pdf"><div class="cert-label">Certificado 8</div></div>
+  </div>
+  
+  <div class="cert-final-destacado">
+    <div class="cert-embed-card-final">
+      <embed src="certificados/certificadofinal.pdf" type="application/pdf" class="cert-pdf-final">
+      <div class="cert-label-final">Certificado Final - Google UX Design</div>
+    </div>
+  </div>
+
+  <footer>
+    <i class="far fa-copyright"></i> 2026 · Jesús Emmanuel López Zúñiga · Portafolio UX<br>
+    Certificados del programa Google UX Design Professional Certificate
+  </footer>
+</div>
+</body>
+</html>
